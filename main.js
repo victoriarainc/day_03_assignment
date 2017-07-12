@@ -26,6 +26,7 @@ for (let i = 0; i < customers.results.length; i++) {
   let person = (customers.results[i]);
 
   let template = `
+          <div>
           <img src = "${customers.results[i].picture.large}">
           <ul>
           <li> ${customers.results[i].name.first} ${customers.results[i].name.last}</li>
@@ -34,10 +35,10 @@ for (let i = 0; i < customers.results.length; i++) {
           <li> ${customers.results[i].location.city} ,   ${customers.results[i].location.state} ${customers.results[i].location.postcode}</li>
           <li> ${customers.results[i].cell}</li>
           <li> ${customers.results[i].id.value}</li>
+          </div>
     `
 
-  // people.appendChild('template');
-  // .people.innerHTML = person;
+
   people.innerHTML += template;
 }
 // create a template to put variables into the
