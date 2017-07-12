@@ -1,5 +1,5 @@
 body {
-  display: flex;
+  width: 90%;
 }
 
 header {
@@ -11,11 +11,19 @@ header {
 
 section {
   display: flex;
+  flex-flow: row wrap;
 }
 
 div {
+  display: flex;
   justify-content: space-around;
   align-content: center;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  height: 20vw;
+  width: 20vw;
 }

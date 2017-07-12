@@ -18,29 +18,27 @@
 
 let people = document.querySelector('section');
 
-// for (let i = 0; i < customers.results.length; i++) {
+for (let i = 0; i < customers.results.length; i++) {
 
   let div = document.createElement('div');
 
   let access = document.querySelector('body');
-  let person = (customers.results[0]);
+  let person = (customers.results[i]);
 
   let template = `
-      <div>
-          <img src = "${customers.results[0].picture.medium}">
-          <p> ${customers.results[0].name.first}</p>
-          <p> ${customers.results[0].name.last}</p>
-          <p> ${customers.results[0].email}</p>
-          <p> ${customers.results[0].location[0]}</p>
-          <p> ${customers.results[0].cell}</p>
-          <p> ${customers.results[0].id.value} </p>
-      </div>
+          <img src = "${customers.results[i].picture.large}">
+          <ul>
+          <li> ${customers.results[i].name.first} ${customers.results[i].name.last}</li>
+          <li> ${customers.results[i].email}</li>
+          <li> ${customers.results[i].location.street}</li>
+          <li> ${customers.results[i].location.city} ,   ${customers.results[i].location.state} ${customers.results[i].location.postcode}</li>
+          <li> ${customers.results[i].cell}</li>
+          <li> ${customers.results[i].id.value}</li>
     `
 
   // people.appendChild('template');
   // .people.innerHTML = person;
-  people.innerHTML = template;
-
-// }
+  people.innerHTML += template;
+}
 // create a template to put variables into the
 // populated divs from the function's loop
