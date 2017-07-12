@@ -1,3 +1,21 @@
 body {
+  display: flex;
+}
 
+header {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row wrap;
+  width: 100%;
+}
+
+section {
+  display: flex;
+}
+
+div {
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
